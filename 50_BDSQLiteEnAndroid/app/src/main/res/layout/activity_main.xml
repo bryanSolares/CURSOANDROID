@@ -19,8 +19,12 @@
         android:id="@+id/consultar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Consultar Usuario"
         android:onClick="Evento"/>
+=======
+        android:text="Consultar Usuario"/>
+>>>>>>> 097de7ce8533662e4f3e092734f48aeb0816659c
 
     <Button
         android:id="@+id/consultar2"

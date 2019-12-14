@@ -27,9 +27,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.registrar:
                 intencion = new Intent(this,RegistrarUsuario.class);
                 break;
+<<<<<<< HEAD
             case R.id.consultar1:
                 intencion = new Intent(this,ConsultarUsuario.class);
                 break;
+=======
+>>>>>>> 097de7ce8533662e4f3e092734f48aeb0816659c
         }
 
         if (intencion !=null) {
