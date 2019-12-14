@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsultarUsuario">
+
+    <Button
+        android:id="@+id/consulta_btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="Consultar_Evento"/>
+
+    <EditText
+        android:id="@+id/consulta_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Ingresa Id"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/consulta_btnBuscar"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/consulta_nombre"
+        android:layout_width="351dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="68dp"
+        android:hint="Nombre"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consulta_id" />
+
+    <EditText
+        android:id="@+id/consulta_telefono"
+        android:layout_width="353dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:hint="Telefono"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consulta_nombre" />
+
+    <Button
+        android:id="@+id/consulta_btnActualizar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="68dp"
+        android:onClick="Consultar_Evento"
+        android:text="actualizar"
+        app:layout_constraintEnd_toStartOf="@+id/consulta_btnEliminar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consulta_telefono" />
+
+    <Button
+        android:id="@+id/consulta_btnEliminar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consulta_telefono"
+        android:onClick="Consultar_Evento"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
