@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsultaComboUsuario"
+    android:paddingBottom="16dp"
+    android:paddingLeft="64dp"
+    android:paddingRight="64dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione una Accion"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/comboUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Documento"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:id="@+id/usuarioDocumento"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:id="@+id/usuarioNombre"/>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:id="@+id/usuarioTelefono"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

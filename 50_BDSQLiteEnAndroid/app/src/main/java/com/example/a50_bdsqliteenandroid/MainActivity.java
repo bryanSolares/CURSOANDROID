@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,12 +26,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.registrar:
                 intencion = new Intent(this,RegistrarUsuario.class);
                 break;
-<<<<<<< HEAD
+
             case R.id.consultar1:
                 intencion = new Intent(this,ConsultarUsuario.class);
                 break;
-=======
->>>>>>> 097de7ce8533662e4f3e092734f48aeb0816659c
+
+            case R.id.consultar2:
+                intencion = new Intent(this, ConsultaComboUsuario.class);
+                break;
         }
 
         if (intencion !=null) {
