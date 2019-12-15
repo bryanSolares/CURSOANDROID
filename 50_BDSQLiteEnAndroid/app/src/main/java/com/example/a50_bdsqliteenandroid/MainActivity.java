@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.consultar2:
                 intencion = new Intent(this, ConsultaComboUsuario.class);
                 break;
+
+            case R.id.consultar3:
+                intencion = new Intent(this,ConsultaListView.class);
+                break;
         }
 
         if (intencion !=null) {

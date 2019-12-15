@@ -1,6 +1,8 @@
 package com.example.a50_bdsqliteenandroid.Entidades;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 
     private Integer idUsuario;
     private String nombre;
@@ -37,5 +39,11 @@ public class Usuario {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        return "idUsuario=" + idUsuario +
+                "-- nombre='" + nombre ;
     }
 }

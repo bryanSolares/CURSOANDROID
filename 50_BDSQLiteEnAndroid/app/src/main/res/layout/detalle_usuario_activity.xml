@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleUsuario"
+    android:paddingBottom="16dp"
+    android:paddingLeft="64dp"
+    android:paddingRight="64dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/txtidUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/txtNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nombre"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TELEFONO"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/txtTelefonoUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="telefono"
+        android:textSize="20sp"/>
+
+</LinearLayout>
