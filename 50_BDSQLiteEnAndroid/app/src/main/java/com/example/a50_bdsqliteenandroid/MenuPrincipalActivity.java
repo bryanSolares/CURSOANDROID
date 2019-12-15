@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuPrincipalActivity extends AppCompatActivity {
 
     private ConexionSQLiteHelper conexion;
 
@@ -24,19 +24,27 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()){
             case R.id.registrar:
-                intencion = new Intent(this,RegistrarUsuario.class);
+                intencion = new Intent(this, RegistrarUsuarioActivity.class);
+                break;
+
+            case R.id.registrarMascota:
+                intencion = new Intent(this,RegistrarMascotaActivity.class);
                 break;
 
             case R.id.consultar1:
-                intencion = new Intent(this,ConsultarUsuario.class);
+                intencion = new Intent(this, ConsultarUsuarioActivity.class);
                 break;
 
             case R.id.consultar2:
-                intencion = new Intent(this, ConsultaComboUsuario.class);
+                intencion = new Intent(this, ConsultaComboUsuarioActivity.class);
                 break;
 
             case R.id.consultar3:
-                intencion = new Intent(this,ConsultaListView.class);
+                intencion = new Intent(this, ConsultaListViewActivity.class);
+                break;
+
+            case R.id.consultar4:
+                intencion = new Intent(this, ConsultarListaMascotasActivity.class);
                 break;
         }
 

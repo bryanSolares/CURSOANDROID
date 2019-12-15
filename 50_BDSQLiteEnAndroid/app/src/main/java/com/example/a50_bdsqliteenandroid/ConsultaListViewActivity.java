@@ -10,14 +10,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.a50_bdsqliteenandroid.Entidades.Usuario;
 import com.example.a50_bdsqliteenandroid.Utilidades.Utilidades;
 
 import java.util.ArrayList;
 
-public class ConsultaListView extends AppCompatActivity {
+public class ConsultaListViewActivity extends AppCompatActivity {
 
     private ListView listaUsuarioView;
     private ArrayList<String> listaInformacion;
@@ -59,7 +58,7 @@ public class ConsultaListView extends AppCompatActivity {
 
     private void obtenerLista() {
 
-        Intent intencion = new Intent(this,DetalleUsuario.class);
+        Intent intencion = new Intent(this, DetalleUsuarioActivity.class);
         Bundle bundle = new Bundle();
 
         listaInformacion = new ArrayList<>();

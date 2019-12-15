@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.a50_bdsqliteenandroid.Entidades.Usuario;
 
-public class DetalleUsuario extends AppCompatActivity {
+public class DetalleUsuarioActivity extends AppCompatActivity {
 
     private TextView txtidUsuario, txtnombreUsuario, txttelefonoUsuario;
 

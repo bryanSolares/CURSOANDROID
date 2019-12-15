@@ -4,50 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarUsuarioActivity"
+    tools:context=".RegistrarMascotaActivity"
     android:orientation="vertical">
 
     <TextView
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="REGISTRO DE USUARIO"
+        android:text="REGISTRO DE MASCOTA"
         android:gravity="center"
         android:textSize="30sp"/>
 
     <EditText
-        android:id="@+id/idUsuario"
+        android:id="@+id/nombreMascota"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Id"/>
+        android:hint="Nombre Mascota"/>
 
     <EditText
-        android:id="@+id/nombreUsuario"
+        android:id="@+id/razaMascota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre"/>
+        android:hint="Raza Mascota"/>
 
-    <EditText
-        android:id="@+id/telefonoUsuario"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Telefono"/>
+        android:text="Duenio"/>
+
+    <Spinner
+        android:id="@+id/listaDuenio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/registrar"
+        android:id="@+id/registrarMascota"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar"
-        android:onClick="EventoRegistrar"/>
-
-    <Button
-        android:id="@+id/salir"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salir"
-        android:onClick="EventoRegistrar"/>
+        android:onClick="Evento"/>
 
 </LinearLayout>

@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.a50_bdsqliteenandroid.Utilidades.Utilidades;
 
-public class RegistrarUsuario extends AppCompatActivity {
+public class RegistrarUsuarioActivity extends AppCompatActivity {
 
     private EditText idUsuario, nombreUsuario, telefonoUsuario;
     private ConexionSQLiteHelper conexion;

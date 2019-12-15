@@ -18,7 +18,7 @@ import com.example.a50_bdsqliteenandroid.Utilidades.Utilidades;
 
 import java.util.ArrayList;
 
-public class ConsultaComboUsuario extends AppCompatActivity {
+public class ConsultaComboUsuarioActivity extends AppCompatActivity {
 
     private Spinner comboUsuarios;
     private TextView usuarioDocumento, usuarioNombre, usuarioTelefono;

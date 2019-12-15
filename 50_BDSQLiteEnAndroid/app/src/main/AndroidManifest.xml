@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetalleUsuario"></activity>
-        <activity android:name=".ConsultaListView" />
-        <activity android:name=".ConsultaComboUsuario" />
-        <activity android:name=".ConsultarUsuario" />
-        <activity android:name=".RegistrarUsuario" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ConsultarListaMascotasActivity"></activity>
+        <activity android:name=".RegistrarMascotaActivity" />
+        <activity android:name=".DetalleUsuarioActivity" />
+        <activity android:name=".ConsultaListViewActivity" />
+        <activity android:name=".ConsultaComboUsuarioActivity" />
+        <activity android:name=".ConsultarUsuarioActivity" />
+        <activity android:name=".RegistrarUsuarioActivity" />
+        <activity android:name=".MenuPrincipalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

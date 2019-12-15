@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MenuPrincipalActivity"
     android:orientation="vertical">
 
     <Button
@@ -13,6 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar usuario"
+        android:onClick="Evento"/>
+
+    <Button
+        android:id="@+id/registrarMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Mascota"
         android:onClick="Evento"/>
 
     <Button
@@ -34,6 +41,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="  consultar lista de usuario usando ListView"
+        android:onClick="Evento"/>
+
+    <Button
+        android:id="@+id/consultar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  consultar lista de Mascotas"
         android:onClick="Evento"/>
 
 </LinearLayout>
