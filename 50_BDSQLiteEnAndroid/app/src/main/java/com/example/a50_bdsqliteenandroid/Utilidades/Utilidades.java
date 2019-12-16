@@ -21,6 +21,6 @@ public class Utilidades {
     public static final String CAMPO_RAZA = "raza";
 
     public static final String CREAR_TABLA_MASCOTA = "CREATE TABLE " + TABLA_MASCOTA +
-            "("+CAMPO_ID_DUENIO+ " INTEGER," + CAMPO_ID_MASCOTA + " INTEGER PRIMARY KEY AUTOINCREMENT," + CAMPO_NOMBRE_MASCOTA + " TEXT,"
-            + CAMPO_RAZA + " TEXT)";
+            "(CAMPO_ID_MASCOTA  INTEGER PRIMARY KEY AUTOINCREMENT," + CAMPO_NOMBRE_MASCOTA + " TEXT,"
+            + CAMPO_RAZA + " TEXT," + CAMPO_ID_DUENIO + " INTEGER)";
 }
