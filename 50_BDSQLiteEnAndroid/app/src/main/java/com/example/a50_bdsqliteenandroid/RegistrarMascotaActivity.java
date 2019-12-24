@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.a50_bdsqliteenandroid.Entidades.Usuario;
 import com.example.a50_bdsqliteenandroid.Utilidades.Utilidades;
@@ -56,11 +57,12 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
     }
 
     private void consultarListaPersonas(){
-        SQLiteDatabase bd = conexion.getReadableDatabase();
 
+        SQLiteDatabase bd = conexion.getReadableDatabase();
+        listaUsuarios = new ArrayList<>();
         Usuario persona = null;
 
-        listaUsuarios = new ArrayList<>();
+
 
         Cursor cursor = bd.rawQuery("SELECT * FROM " + Utilidades.TABLA_USUARIO,null);
 
@@ -73,10 +75,10 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
             listaUsuarios.add(persona);
         }
 
-        obtenerListaPersona();
+        cargarDatosSpinner();
     }
 
-    private void obtenerListaPersona(){
+    private void cargarDatosSpinner(){
         listaPersonas = new ArrayList<>();
         listaPersonas.add("Seleccione una Opcion");
         for (Usuario elemento : listaUsuarios) {
@@ -99,8 +101,8 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
             db.insert(Utilidades.TABLA_MASCOTA,Utilidades.CAMPO_ID_MASCOTA,valores);
 
         }else{
-
+            Toast.makeText(this,"Debe relacionar un dueño con la mascota", Toast.LENGTH_LONG).show();
         }
 
-    }
+        }
 }

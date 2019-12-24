@@ -23,11 +23,11 @@ public class ConsultarUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.consultar_usuario_activity);
 
-        conexion = new ConexionSQLiteHelper(this,"bd_usuario",null,1);
+        conexion = new ConexionSQLiteHelper(getApplicationContext(),"bd_usuario",null,1);
 
         idUsuario = findViewById(R.id.consulta_id);
-        nombreUsuario = findViewById(R.id.nombreUsuario);
-        telefonoUsuario = findViewById(R.id.telefonoUsuario);
+        nombreUsuario = findViewById(R.id.consulta_nombre);
+        telefonoUsuario = findViewById(R.id.consulta_telefono);
 
     }
     public void Consultar_Evento(View view) {
@@ -35,7 +35,7 @@ public class ConsultarUsuarioActivity extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.consulta_btnBuscar:
-                consultarUsuario(2);
+                consultarUsuario(1);
                 break;
 
             case R.id.consulta_btnActualizar:

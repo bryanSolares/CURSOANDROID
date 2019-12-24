@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleMascotasActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATOS MASCOTA"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/idMascotaVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id Mascota"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/nombreMascotaVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre Mascota: "
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/razaMascotaVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raza Mascota"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATOS DUEÑO"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/idDuenioVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id Dueño"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/nombreDuenioVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre Dueñio: "
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/telefonoDuenioVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teléfono: "
+        android:textSize="20sp"/>
+
+
+</LinearLayout>
