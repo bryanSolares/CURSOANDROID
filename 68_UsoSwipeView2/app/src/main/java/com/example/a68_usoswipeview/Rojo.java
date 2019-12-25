@@ -1,4 +1,4 @@
-package com.example.a64_usofragmentsestaticos;
+package com.example.a68_usoswipeview;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,19 +9,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FragmentVerde.OnFragmentInteractionListener} interface
+ * {@link Rojo.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FragmentVerde#newInstance} factory method to
+ * Use the {@link Rojo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentVerde extends Fragment {
+public class Rojo extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,12 +28,10 @@ public class FragmentVerde extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Button btnFragmentVerde;
-    private View view;
 
     private OnFragmentInteractionListener mListener;
 
-    public FragmentVerde() {
+    public Rojo() {
         // Required empty public constructor
     }
 
@@ -45,11 +41,11 @@ public class FragmentVerde extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentVerde.
+     * @return A new instance of fragment Rojo.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentVerde newInstance(String param1, String param2) {
-        FragmentVerde fragment = new FragmentVerde();
+    public static Rojo newInstance(String param1, String param2) {
+        Rojo fragment = new Rojo();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -70,16 +66,7 @@ public class FragmentVerde extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        view = inflater.inflate(R.layout.fragment_fragment_verde,container,false);
-        btnFragmentVerde = view.findViewById(R.id.btnFragmentVerde);
-        btnFragmentVerde.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"Presiona",Toast.LENGTH_LONG).show();
-            }
-        });
-        return view;
+        return inflater.inflate(R.layout.fragment_rojo, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
