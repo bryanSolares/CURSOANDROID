@@ -12,9 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdaptadorPersonajes extends RecyclerView.Adapter<AdaptadorPersonajes.HolderPersonajes> {
+public class AdaptadorPersonajes extends RecyclerView.Adapter<AdaptadorPersonajes.HolderPersonajes> implements View.OnClickListener {
 
     private List<PersonajeVO> listaPersonajes;
+    private View.OnClickListener listener;
 
     public AdaptadorPersonajes(List<PersonajeVO> listaPersonajes) {
         this.listaPersonajes = listaPersonajes;
@@ -23,21 +24,42 @@ public class AdaptadorPersonajes extends RecyclerView.Adapter<AdaptadorPersonaje
     @NonNull
     @Override
     public HolderPersonajes onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        int layout = 0;
+        if (Utilidades.visualizacion == Utilidades.LIST) {
+            layout = R.layout.item_list_personaje;
+        } else {
+            layout = R.layout.item_grid_personaje;
+        }
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_personaje,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(layout, null, false);
+
+        view.setOnClickListener(this);
+
         return new HolderPersonajes(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull HolderPersonajes holder, int position) {
         holder.nombre.setText(listaPersonajes.get(position).getNombre());
-        holder.informacion.setText(listaPersonajes.get(position).getInfo());
+
+        if (Utilidades.visualizacion == Utilidades.LIST)
+            holder.informacion.setText(listaPersonajes.get(position).getInfo());
         holder.foto.setImageResource(listaPersonajes.get(position).getFoto());
     }
 
     @Override
     public int getItemCount() {
         return listaPersonajes.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (listener != null)
+            listener.onClick(v);
     }
 
     public class HolderPersonajes extends RecyclerView.ViewHolder {
@@ -48,7 +70,8 @@ public class AdaptadorPersonajes extends RecyclerView.Adapter<AdaptadorPersonaje
         public HolderPersonajes(@NonNull View itemView) {
             super(itemView);
             nombre = itemView.findViewById(R.id.idNombre);
-            informacion = itemView.findViewById(R.id.idInformacion);
+            if (Utilidades.visualizacion == Utilidades.LIST)
+                informacion = itemView.findViewById(R.id.idInformacion);
             foto = itemView.findViewById(R.id.idImagen);
         }
     }
