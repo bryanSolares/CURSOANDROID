@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.inspeccionplantilllabasica.MainActivity">
+
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+    <!--si usuario no está interactuando con el botón, éste se oculta "ifRoom|collapseActionView"-->
+
+
+    <item android:id="@+id/action_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@color/colorPrimary"
+        android:title="Action"
+        app:showAsAction="ifRoom"/> <!--muestra la acción como botón si hay espacio en la barra-->
+
+    <item
+        android:id="@+id/action_relative"
+        android:title="Accion"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@id/action_settings"
+        android:title="Alguna Cosa"
+        app:showAsAction="never|collapseActionView"
+        android:actionLayout=""/> <!--especifica si se debe mostrar la acción como botón en la barra de la app-->
+
+
+
+
+</menu>
