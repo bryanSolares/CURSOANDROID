@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Intent Implicitos 2</string>
+    <string name="uri_label">URI:</string>
+</resources>
