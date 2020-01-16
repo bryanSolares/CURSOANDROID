@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.patromaestrodetalle.Entidades.PersonajeVO;
 import com.example.patromaestrodetalle.R;
 
 /**
@@ -31,6 +34,8 @@ public class DetallePersonajesFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private ImageView imagenDetalle;
+    private TextView descripcionDetalle;
 
     public DetallePersonajesFragment() {
         // Required empty public constructor
@@ -67,7 +72,20 @@ public class DetallePersonajesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalle_personaje, container, false);
+        View vista = inflater.inflate(R.layout.fragment_detalle_personaje, container, false);
+        descripcionDetalle = vista.findViewById(R.id.descripcionDetalle);
+        imagenDetalle = vista.findViewById(R.id.imagenDetalle);
+
+        Bundle bundle = getArguments();
+        PersonajeVO personaje = null;
+
+        if (bundle != null){
+            personaje = (PersonajeVO) bundle.getSerializable("personaje");
+            imagenDetalle.setImageResource(personaje.getImagenDetalle());
+            descripcionDetalle.setText(personaje.getDescripcion());
+        }
+
+        return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
