@@ -1,18 +1,31 @@
 package com.example.patromaestrodetalle.Entidades;
 
-public class PersonajeVO {
+import java.io.Serializable;
+
+public class PersonajeVO implements Serializable {
 
     private String nombre;
     private String descripcion;
     private int imagen;
+    private String informacion;
+    private int imagenDetalle;
 
     public PersonajeVO() {
     }
 
+    /*
     public PersonajeVO(String nombre, String descripcion, int imagen) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.imagen = imagen;
+    }*/
+
+    public PersonajeVO(String nombre, String descripcion, int imagen, String informacion, int imagenDetalle) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.imagen = imagen;
+        this.informacion = informacion;
+        this.imagenDetalle = imagenDetalle;
     }
 
     public String getNombre() {
@@ -37,5 +50,21 @@ public class PersonajeVO {
 
     public void setImagen(int imagen) {
         this.imagen = imagen;
+    }
+
+    public String getInformacion() {
+        return informacion;
+    }
+
+    public void setInformacion(String informacion) {
+        this.informacion = informacion;
+    }
+
+    public int getImagenDetalle() {
+        return imagenDetalle;
+    }
+
+    public void setImagenDetalle(int imagenDetalle) {
+        this.imagenDetalle = imagenDetalle;
     }
 }

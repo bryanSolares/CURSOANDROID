@@ -1,5 +1,6 @@
 package com.example.patromaestrodetalle.Fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.patromaestrodetalle.Adaptadores.AdaptadorPersonaje;
 import com.example.patromaestrodetalle.Entidades.PersonajeVO;
+import com.example.patromaestrodetalle.Interfaces.IComunicaFragments;
 import com.example.patromaestrodetalle.R;
 
 import java.util.ArrayList;
@@ -42,6 +44,8 @@ public class ListaPersonajesFragment extends Fragment {
 
     private List<PersonajeVO> listaPersonajes;
     private RecyclerView recyclerPersonajes;
+    private IComunicaFragments comunicaFragments;
+    private Activity actividad;
 
     public ListaPersonajesFragment() {
         // Required empty public constructor
@@ -91,23 +95,25 @@ public class ListaPersonajesFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getContext(),
                         "Seleccionado: " + listaPersonajes.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
+                comunicaFragments.enviarPersonaje(listaPersonajes.get(recyclerPersonajes.getChildAdapterPosition(v)));
             }
         });
         return vista;
     }
 
     private void llenarListaPersonajes(){
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
-        listaPersonajes.add(new PersonajeVO("Elemento","Descripcion",R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
+        listaPersonajes.add(new PersonajeVO(getString(R.string.nombre),getString(R.string.descripcion),R.drawable.ic_launcher_background,getString(R.string.informacion),R.drawable.ic_launcher_background));
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -120,6 +126,12 @@ public class ListaPersonajesFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
+        if (context instanceof Activity){
+            this.actividad = (Activity) context;
+            comunicaFragments = (IComunicaFragments) this.actividad;
+        }
+
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
