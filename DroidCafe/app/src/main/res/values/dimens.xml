@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_start">24dp</dimen>
+    <dimen name="margin_left">24dp</dimen>
+    <dimen name="margin_top">24dp</dimen>
+    <dimen name="margin_end">24dp</dimen>
+    <dimen name="margin_right">24dp</dimen>
+    <dimen name="width">160dp</dimen>
+    <dimen name="height">115dp</dimen>
+    <dimen name="margin_top_label">75dp</dimen>
+</resources>
