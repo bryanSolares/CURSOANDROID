@@ -15,7 +15,11 @@
         android:src="@drawable/ic_launcher_background" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/descripcionDetalle"
+=======
+        android:id="@+id/imagenDescripcion"
+>>>>>>> 1570c0ba35b0460ddde5b2f5d9d9bd935e6d3485
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Descripcion" />

@@ -20,13 +20,18 @@ public class MainActivity extends AppCompatActivity implements ListaPersonajesFr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listaPersonajesFragment = new ListaPersonajesFragment();
-        detallePersonajesFragment = new DetallePersonajesFragment();
+        if (findViewById(R.id.contenedorFragment) != null){
+            if (savedInstanceState != null){
+                return;
+            }
+            listaPersonajesFragment = new ListaPersonajesFragment();
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.contenedorFragment,listaPersonajesFragment)
-                .commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.contenedorFragment, listaPersonajesFragment)
+                    .commit();
+        }
+
     }
 
     @Override
@@ -36,13 +41,24 @@ public class MainActivity extends AppCompatActivity implements ListaPersonajesFr
 
     @Override
     public void enviarPersonaje(PersonajeVO personaje) {
+<<<<<<< HEAD
         Bundle bundle = new Bundle();
         bundle.putSerializable("personaje",personaje);
+=======
+        detallePersonajesFragment = new DetallePersonajesFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("personaje", personaje);
+>>>>>>> 1570c0ba35b0460ddde5b2f5d9d9bd935e6d3485
         detallePersonajesFragment.setArguments(bundle);
 
         getSupportFragmentManager()
                 .beginTransaction()
+<<<<<<< HEAD
                 .replace(R.id.contenedorFragment,detallePersonajesFragment)
+=======
+                .replace(R.id.contenedorFragment, detallePersonajesFragment)
+>>>>>>> 1570c0ba35b0460ddde5b2f5d9d9bd935e6d3485
                 .addToBackStack(null)
                 .commit();
 

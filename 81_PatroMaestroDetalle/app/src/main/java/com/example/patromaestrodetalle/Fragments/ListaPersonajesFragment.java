@@ -95,7 +95,10 @@ public class ListaPersonajesFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getContext(),
                         "Seleccionado: " + listaPersonajes.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1570c0ba35b0460ddde5b2f5d9d9bd935e6d3485
                 comunicaFragments.enviarPersonaje(listaPersonajes.get(recyclerPersonajes.getChildAdapterPosition(v)));
             }
         });

@@ -12,7 +12,11 @@
         <activity android:name=".PickerHour"></activity>
         <activity android:name=".PickerDate" />
         <activity android:name=".DialogAlert" />
-        <activity android:name=".OrderActivity" />
+        <activity android:name=".OrderActivity"
+            android:label="@string/title_activity_order"
+            android:parentActivityName=".MainActivity"/>
+        <meta-data android:name="android.support.PARENTACTIVITY"
+            android:value=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

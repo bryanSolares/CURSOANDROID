@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tab Experiment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab1">Estas son las historias Principales</string>
+    <string name="tab2">Noticias Tecnológicas que puedes Usar</string>
+    <string name="tab3">Consejos de Cocina</string>
+    
+    <string name="tab_label1">Top Stories</string>
+    <string name="tab_label2">Tech News</string>
+    <string name="tab_label3">Cooking</string>
+</resources>

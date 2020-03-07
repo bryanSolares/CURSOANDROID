@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_action_favorite"
+        android:title="Favoritos"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@drawable/ic_action_setting"
+        android:title="Setting"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Share"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_file"
+        android:title="File">
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:title="Create" />
+            <item
+                android:id="@+id/open"
+                android:title="Open" />
+        </menu>
+    </item>
+
+</menu>
